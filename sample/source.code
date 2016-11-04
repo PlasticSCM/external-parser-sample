@@ -1,0 +1,12 @@
+class Socket
+{
+   void Connect(string server)
+   {
+      SocketLibrary.Connect(mSocket, server);
+   }
+
+   void Disconnect()
+   {
+      SocketLibrary.Disconnect(mSocket);
+   }
+}
