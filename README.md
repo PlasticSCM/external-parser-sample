@@ -16,4 +16,5 @@ semanticmergetool.exe -s sample\source.code -d sample\destination.code -ep=codep
 Create an externalparsers.conf under your plastic4 configuration directory as follows:
 
 C:\Users\pablo\AppData\Local\plastic4>type externalparsers.conf
+
 .code=C:\Users\pablo\wkspaces\semantic-external-parsers\codeparser\bin\debug\codeparser.exe
