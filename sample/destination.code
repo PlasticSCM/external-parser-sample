@@ -1,14 +1,23 @@
+include #sockets
+include #system
 
-
+// this comment is for the socket class
 class Socket
 {
+
    void Disconnect()
    {
       SocketLibrary.Disconnect(mSocket, mTimeout);
    }
 
+   /* This is a comment on the Connect method 
+    * that spans for a few lines
+    */
    void Connect(string server)
    {
       SocketLibrary.Connect(mSocket, server);
    }
+
+   // this comment goes at the end
+   // of the file, who is its owner?
 }

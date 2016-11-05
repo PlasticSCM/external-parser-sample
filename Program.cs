@@ -7,8 +7,6 @@ namespace codeparser
     {
         static void Main(string[] args)
         {
-//            System.Threading.Thread.Sleep(10 * 1000);
-
             // Write the "flagfile" when you're ready
             File.WriteAllText(args[1], "READY");
 
@@ -54,27 +52,37 @@ namespace codeparser
                 writer.WriteLine("---");
                 writer.WriteLine("type: file");
                 writer.WriteLine("name: {0}", input);
-                writer.WriteLine("locationSpan : {start: [1,0], end: [12,1]}");
+                writer.WriteLine("locationSpan : {start: [1,0], end: [22,1]}");
                 writer.WriteLine("footerSpan : [0,-1]");
                 writer.WriteLine("parsingErrorsDetected : false");
-                writer.WriteLine("children:");
+                writer.WriteLine("children :");
+
+                writer.WriteLine("  - type : include");
+                writer.WriteLine("    name : sockets");
+                writer.WriteLine("    locationSpan : {start: [1, 0], end: [1, 18]}");
+                writer.WriteLine("    span : [0, 17]");
+
+                writer.WriteLine("  - type : include");
+                writer.WriteLine("    name : system");
+                writer.WriteLine("    locationSpan : {start: [2, 0], end: [2,17]}");
+                writer.WriteLine("    span : [18, 34]");
 
                 writer.WriteLine("  - type : class");
                 writer.WriteLine("    name : Socket");
-                writer.WriteLine("    locationSpan : {start: [1,0], end: [12,1]}");
-                writer.WriteLine("    headerSpan : [0, 16]");
-                writer.WriteLine("    footerSpan : [186, 186]");
+                writer.WriteLine("    locationSpan : {start: [3,0], end: [22,1]}");
+                writer.WriteLine("    headerSpan : [35, 94]");
+                writer.WriteLine("    footerSpan : [354, 430]");
                 writer.WriteLine("    children :");
 
                 writer.WriteLine("    - type : method");
                 writer.WriteLine("      name : Connect");
-                writer.WriteLine("      locationSpan : {start: [3, 0], end: [7,2]}");
-                writer.WriteLine("      span : [17, 109]");
+                writer.WriteLine("      locationSpan : {start: [7, 0], end: [13,6]}");
+                writer.WriteLine("      span : [95, 275]");
 
                 writer.WriteLine("    - type : method");
                 writer.WriteLine("      name : Disconnect");
-                writer.WriteLine("      locationSpan : {start: [8,0], end: [11,6]}");
-                writer.WriteLine("      span : [110, 185]");
+                writer.WriteLine("      locationSpan : {start: [14,0], end: [18,6]}");
+                writer.WriteLine("      span : [276, 353]");
             }
         }
 
@@ -85,27 +93,34 @@ namespace codeparser
                 writer.WriteLine("---");
                 writer.WriteLine("type: file");
                 writer.WriteLine("name: {0}", input);
-                writer.WriteLine("locationSpan : {start: [1,0], end: [14,1]}");
+                writer.WriteLine("locationSpan : {start: [1,0], end: [23,1]}");
                 writer.WriteLine("footerSpan : [0,-1]");
                 writer.WriteLine("parsingErrorsDetected : false");
-                writer.WriteLine("children:");
+                writer.WriteLine("children :");
+
+                writer.WriteLine("  - type : include");
+                writer.WriteLine("    name : sockets");
+                writer.WriteLine("    span : [0, 17]");
+
+                writer.WriteLine("  - type : include");
+                writer.WriteLine("    name : system");
+                writer.WriteLine("    span : [18, 34]");
 
                 writer.WriteLine("  - type : class");
                 writer.WriteLine("    name : Socket");
-                writer.WriteLine("    locationSpan : {start: [1,0], end: [14,1]}");
-                writer.WriteLine("    headerSpan : [0, 20]");
-                writer.WriteLine("    footerSpan : [200, 200]");
+                writer.WriteLine("    headerSpan : [35, 94]");
+                writer.WriteLine("    footerSpan : [366, 442]");
                 writer.WriteLine("    children :");
 
                 writer.WriteLine("    - type : method");
                 writer.WriteLine("      name : Disconnect");
-                writer.WriteLine("      locationSpan : {start: [5, 0], end: [9,2]}");
-                writer.WriteLine("      span : [21, 98]");
+                writer.WriteLine("      locationSpan : {start: [7, 0], end: [11,6]}");
+                writer.WriteLine("      span : [95, 182]");
 
                 writer.WriteLine("    - type : method");
                 writer.WriteLine("      name : Connect");
-                writer.WriteLine("      locationSpan : {start: [10,0], end: [13,6]}");
-                writer.WriteLine("      span : [99, 199]");
+                writer.WriteLine("      locationSpan : {start: [13, 0], end: [19,6]}");
+                writer.WriteLine("      span : [183, 365]");
             }
         }
     }
