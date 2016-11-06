@@ -2,7 +2,7 @@ class Socket
 {
    void Connect(string server)
    {
-      SocketLibrary.Connect(mSocket, server);
+      SocketLibrary.Connect(mSocket, server) 
    }
 
    void Disconnect()

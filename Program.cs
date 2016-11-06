@@ -56,7 +56,7 @@ namespace codeparser
                 writer.WriteLine("name: {0}", input);
                 writer.WriteLine("locationSpan : {start: [1,0], end: [12,1]}");
                 writer.WriteLine("footerSpan : [0,-1]");
-                writer.WriteLine("parsingErrorsDetected : false");
+                writer.WriteLine("parsingErrorsDetected : true");
                 writer.WriteLine("children:");
 
                 writer.WriteLine("  - type : class");
@@ -75,6 +75,10 @@ namespace codeparser
                 writer.WriteLine("      name : Disconnect");
                 writer.WriteLine("      locationSpan : {start: [8,0], end: [11,6]}");
                 writer.WriteLine("      span : [110, 185]");
+
+                writer.WriteLine("parsingError:");
+                writer.WriteLine("  - location: [5,45]");
+                writer.WriteLine("    message: \"Missing ; at the end of the line\"");
             }
         }
 
