@@ -10,3 +10,8 @@ class Socket
       SocketLibrary.Disconnect(mSocket);
    }
 }
+
+this is the bottom of the file
+and some languages don't  fail
+to parse  if  there  are extra
+lines after the the code  ends

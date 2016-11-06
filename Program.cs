@@ -54,8 +54,8 @@ namespace codeparser
                 writer.WriteLine("---");
                 writer.WriteLine("type: file");
                 writer.WriteLine("name: {0}", input);
-                writer.WriteLine("locationSpan : {start: [1,0], end: [12,1]}");
-                writer.WriteLine("footerSpan : [0,-1]");
+                writer.WriteLine("locationSpan : {start: [1,0], end: [17,30]}");
+                writer.WriteLine("footerSpan : [189, 316]");
                 writer.WriteLine("parsingErrorsDetected : false");
                 writer.WriteLine("children:");
 
