@@ -7,12 +7,13 @@ namespace codeparser
     {
         static void Main(string[] args)
         {
-//            System.Threading.Thread.Sleep(10 * 1000);
+            //            System.Threading.Thread.Sleep(10 * 1000);
 
             // Write the "flagfile" when you're ready
             File.WriteAllText(args[1], "READY");
 
             string firstFile = Console.ReadLine();
+            string firstEncoding = Console.ReadLine();
             string firstFileOutput = Console.ReadLine();
 
             ParseFile(firstFile, firstFileOutput);
@@ -20,6 +21,7 @@ namespace codeparser
             Console.WriteLine("OK");
 
             string secondFile = Console.ReadLine();
+            string secondEncoding = Console.ReadLine();
             string secondFileOutput = Console.ReadLine();
 
             ParseFile(secondFile, secondFileOutput);
