@@ -7,33 +7,20 @@ namespace codeparser
     {
         static void Main(string[] args)
         {
-//            System.Threading.Thread.Sleep(10 * 1000);
-
             // Write the "flagfile" when you're ready
             File.WriteAllText(args[1], "READY");
 
-            string firstFile = Console.ReadLine();
-            string firstFileOutput = Console.ReadLine();
-
-            ParseFile(firstFile, firstFileOutput);
-
-            Console.WriteLine("OK");
-
-            string secondFile = Console.ReadLine();
-            string secondFileOutput = Console.ReadLine();
-
-            ParseFile(secondFile, secondFileOutput);
-            Console.WriteLine("OK");
-
-            string end = Console.ReadLine();
-
-            if (end == "end")
+            string input;
+            while ((input = Console.ReadLine()) != "end")
             {
-                //Console.WriteLine("Finishing correctly");
-                return;
-            }
+                string encoding = Console.ReadLine();
+                string fileOutput = Console.ReadLine();
 
-            //Console.WriteLine("Finishing incorrectly, no 'end' command received");
+                // You should not ignore the encoding as we do.
+                ParseFile(input, fileOutput);
+
+                Console.WriteLine("OK");
+            }
         }
 
         static void ParseFile(string input, string output)
